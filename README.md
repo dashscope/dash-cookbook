@@ -32,6 +32,7 @@ for the underlying API services).
 
 - Basic semantic search built with Text-Embedding and VectorDB APIs: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dashscope/dash-cookbook/blob/main/examples/basic_semantic_search.ipynb)
 - Question-answering with LLM and knowledge-enhancement:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dashscope/dash-cookbook/blob/main/examples/vectorDB_enhanced_QA_with_LLM.ipynb)
+- Image Generation using LLM-enhanced prompt:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dashscope/dash-cookbook/blob/main/examples/image_generation_with_LLM_enhanced_prompt.ipynb)
 - ... stay tuned for more examples, contribution also welcome!
 
 ## 💁Contributing
