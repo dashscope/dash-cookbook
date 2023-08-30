@@ -34,7 +34,7 @@ for the underlying API services).
 - Question-answering with LLM and knowledge-enhancement:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dashscope/dash-cookbook/blob/main/examples/vectorDB_enhanced_QA_with_LLM.ipynb)
 - ... stay tuned for more examples, contribution also welcome!
 
-# 💁Contributing
+## 💁Contributing
 If there are examples you'd like to see, feel free to [open an issue](https://github.com/dashscope/dash-cookbook/issues). 
 Quality examples are also welcome via pull request, please provide a ipynb implementation following existing examples.
 
