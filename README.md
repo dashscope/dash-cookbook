@@ -12,7 +12,7 @@ services such as the vector-store DashVector.
 ## 🚀 DashScope
 [DashScope](https://dashscope.aliyun.com/) aims to provide the efficient API services backed by
 the state-of-the-art models in different areas, including LLM,
-text-to-image, embedding, text-to-speech etc. Vist the official
+text-to-image, embedding, text-to-speech etc. Visit the official
 [DashScope website](https://dashscope.aliyun.com/) for a complete
 list of models supported. 
 
