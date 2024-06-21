@@ -18,6 +18,16 @@ text-to-image, embedding, text-to-speech etc. Visit the official
 [DashScope website](https://dashscope.aliyun.com/) for a complete
 list of models supported. 
 
+
+## 🚀 ModelStudio
+
+[ModelStudio(百炼)](https://bailian.console.aliyun.com/#/home) is a one-stop large-scale model development platform 
+based on [DashScope](https://dashscope.aliyun.com/) API services.
+It provides complete model service tools and full-chain application development kits for enterprise customers and individual developers, 
+pre-installing rich capability plugins, providing convenient integration methods such as RAG and Assistant API, 
+and efficiently completing the construction of large-scale model applications.
+
+
 ## 🚀 DashVector
 [DashVector](https://www.aliyun.com/activity/intelligent/DashVector) is a fully-managed 
 vectorDB service that supports 
@@ -26,12 +36,6 @@ and filtered search. It is built to scale automatically and can
 adapt to different application requirements. It is currently
 integrated into 🦜️🔗[LangChain](https://python.langchain.com/docs/integrations/vectorstores/dashvector) as well.
 
-## 🚀 ModelStudio
-
-[ModelStudio](https://bailian.console.aliyun.com/#/home) is a one-stop large-scale model development platform.
-It provides complete model service tools and full-chain application development kits for enterprise customers and individual developers, 
-pre-installing rich capability plugins, providing convenient integration methods such as RAG and Assistant API, 
-and efficiently completing the construction of large-scale model applications.
 
 # ✨Examples
 This repository will host examples for accomplishing various tasks by
@@ -39,7 +43,7 @@ leveraging the aforementioned API services. Most examples are presented
 via Colab notebook and are executable _right out of the box_ (once you have the API-key 
 for the underlying API services).
 
-- Basic usage for LLM calls: [DashScope LLM Call](./models/call_model.ipynb)
+- Basic usage for LLM calls: [![Open In PAI-DSW](https://modelscope.oss-cn-beijing.aliyuncs.com/resource/Open-in-DSW20px.svg)](https://gallery.pai-ml.com/#/import/https://github.com/dashscope/dash-cookbook/blob/main/models/call_model.ipynb)  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dashscope/dash-cookbook/blob/main/models/call_model.ipynb)
 
 - Basic semantic search built with Text-Embedding and VectorDB APIs: [![Open In PAI-DSW](https://modelscope.oss-cn-beijing.aliyuncs.com/resource/Open-in-DSW20px.svg)](https://gallery.pai-ml.com/#/import/https://github.com/dashscope/dash-cookbook/blob/main/examples/basic_semantic_search.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dashscope/dash-cookbook/blob/main/examples/basic_semantic_search.ipynb)
 
