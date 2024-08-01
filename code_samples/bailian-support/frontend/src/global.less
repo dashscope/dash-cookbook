@@ -1,0 +1,122 @@
+@import '@/assets/variables.less';
+
+// 解决h5页面被顶出视口问题
+html {
+  position: fixed;
+  bottom: 0;
+}
+
+:root {
+  --font-faimly: 'PingFang SC', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-faimly) !important;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.flexCon {
+  display: flex;
+  align-items: center;
+}
+
+ul,
+li {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+
+  .rax-text {
+    font-size: 14px !important;
+  }
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+div[role='alert-toast'] {
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+ul,
+li {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* markdown 样式覆盖 */
+.markdown-body {
+  font-family: var(--font-faimly) !important;
+  img{
+    width: auto !important;
+  }
+}
+
+.custom-markdown-markdownContent p {
+  line-height: 24px !important;
+  color: var(--text-gray-1) !important;
+}
+
+/* markdown 样式覆盖 */
+.fadeIn {
+  animation: fade-in 0.6s ease-in-out forwards;
+}
+.fadeOut {
+  animation: fade-out 0.6s ease-in-out forwards;
+}
+.fadeOutLeft {
+  animation: fade-out-left 0.6s ease-in-out;
+}
+@keyframes fade-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

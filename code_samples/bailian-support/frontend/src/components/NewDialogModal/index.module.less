@@ -1,0 +1,78 @@
+@import "@/assets/variables.less";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 80, 93, 0.54);
+
+  }
+
+  .modalCon {
+    z-index: 1100;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 512px;
+    border-radius: 16px;
+    background: #f7f7fb;
+    border: 1px solid #f7f7fb;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.02);
+    padding: 36px 38px 28px;
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      color: var(--primary-text-color);
+      text-align: center;
+    }
+    .content {
+      margin-top: 23px;
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      margin-top: 36px;
+      justify-content: center;
+      .okBtn {
+        width: 120px;
+      }
+      &.showCancelBtn {
+        
+        .okBtn,.cancelBtn {
+          width: 120px;
+        }
+        .okBtn {
+          margin-left: 8px;
+        }
+      }
+    }
+ 
+    .hiddenIcon {
+      position: absolute;
+      color: var(--primary-text-color);
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 100;
+    }
+  }
+}

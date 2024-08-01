@@ -1,0 +1,42 @@
+@import '@/assets/variables.less';
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--description-text-color);
+  line-height: 24px;
+  font-size: 14px;
+
+
+  .left,
+  .right {
+    cursor: pointer;
+
+    &:hover:not(.disable) {
+      color: var(--primary-color);
+    }
+  }
+
+  .disable {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
+  .text {
+    .currentPage {
+      color: var(--text-gray-1);
+    }
+  }
+}
+
+.disableFunc {
+  opacity: 0.45;
+  cursor: not-allowed;
+
+  .left,
+  .right {
+    cursor: not-allowed;
+  }
+}

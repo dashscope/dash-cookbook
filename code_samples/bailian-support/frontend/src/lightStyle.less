@@ -1,0 +1,231 @@
+@import '@/assets/variables.less';
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+* {
+  scrollbar-width: 6px;
+}
+
+/* 定义滑块颜色、内阴影及圆角 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.first-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color-2);
+}
+.second-text {
+  font-size: 16px;
+  color: var(--primary-text-color);
+}
+.third-text {
+  font-size: 14px;
+  color: var(--description-text-color);
+}
+.second-text,
+.third-text {
+  font-weight: 400;
+}
+.fourth-text {
+  font-size: 12px;
+  font-weight: 200;
+  color: rgba(135, 138, 171, 0.5);
+}
+
+#ice-container {
+  height: 100%;
+}
+
+.ellipsis-single {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a {
+  color: var(var(--primary-color-2));
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #2c2c73;
+  }
+}
+
+body {
+  .ant-form-item-label > label {
+    color: #707279;
+    justify-content: flex-end;
+    min-width: 60px;
+  }
+  
+  .ant-input:hover {
+    border-color: var(--border-hover-color);
+  }
+  
+  .ant-input:focus {
+    border-color: var(--description-text-color);
+    box-shadow: 0 0 0 2px rgba(195, 197, 217, 0.2);
+  }
+  
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: var(--border-hover-color);
+  }
+
+  .ant-input-affix-wrapper-focused {
+    box-shadow: 0 0 0 2px rgba(195, 197, 217, 0.2);
+    border: 1px solid var(--description-text-color) !important;
+  }
+  
+  .ant-input-affix-wrapper:focus {
+    border-color: var(--description-text-color);
+    box-shadow: 0 0 0 2px rgba(195, 197, 217, 0.2);
+  }
+
+  .ant-input-affix-wrapper:hover {
+    border-color: var(--border-hover-color);
+  }
+  
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-wrapper-checked:hover .ant-checkbox-inner,
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox-checked:hover,
+  .ant-checkbox-inner,
+  .ant-checkbox-checked::after {
+    border-color: var(--description-text-color);
+  }
+  
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--description-text-color);
+    border-color: var(--description-text-color);
+  }
+
+  .ant-checkbox .ant-checkbox-inner {
+    border-color: var(--description-text-color);
+    border-radius: 0;
+    border-width: 2px;
+  }
+
+  .ant-checkbox-wrapper {
+    color: var(--description-text-color);
+  }
+  
+  .ant-select:hover .ant-select-selector {
+    border-color: var(--description-text-color);
+  }
+  
+  .ant-select-focused .ant-select-selector {
+    box-shadow: 0 0 0 2px rgba(62, 68, 95, 0.1);
+    border-color: var(--description-text-color);
+  }
+}
+
+.cursorStyle {
+  margin-left: 3px;
+  vertical-align: baseline;
+  animation: blink 1s steps(5, start) infinite;
+  display: inline-block;
+  width: 8px;
+  height: 4px;
+  background: var(--primary-color-2);
+  content: '';
+}
+ 
+.flushing > p,
+.flushing > li,
+.flushing > dl,
+.flushing > dt,
+.flushing > dd,
+.flushing > h1,
+.flushing > h2,
+.flushing > h3,
+.flushing > h4,
+.flushing > h5,
+.flushing > h6,
+.flushing > td {
+  &:last-child {
+    &::after {
+      .cursorStyle();
+    }
+  }
+}
+
+.flushing > ol:last-child li:last-child,
+.flushing > pre:last-child code,
+.flushing > ul:last-child li:last-child {
+  &::after {
+    .cursorStyle();
+  }
+}
+
+.flushingEmpty::after {
+  .cursorStyle();
+
+}
+
+.flushing > pre:last-child code {
+  &::after {
+    .cursorStyle();
+  }
+}
+.cursor-custom {
+  .cursorStyle();
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.disable {
+  color: #cfcfcf;
+}
+.hide {
+  visibility: hidden;
+}
+.disnone {
+  display: none;
+}
+
+span[data-slate-placeholder=true] {
+  top: 8px !important;
+}
+
+.protocolWrapper {
+  padding-top: 12px !important;
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    margin-top: 17.4pt;
+    margin-bottom: 10.5pt;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    font-size: 17pt;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .dingdocnormal {
+    font-size: 10.5pt;
+  }
+
+  span.Hyperlink {
+    text-decoration: underline;
+    color: #0563c1;
+    -aw-style-name: hyperlink;
+  }
+
+  span.UnresolvedMention {
+    color: #605e5c;
+    background-color: #e1dfdd;
+  }
+}

@@ -1,0 +1,14 @@
+// 加载动画
+.animate-loading(@duration: 1.0s) {
+  animation: animation-loadding @duration ease-in infinite;
+
+  @keyframes animation-loadding {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

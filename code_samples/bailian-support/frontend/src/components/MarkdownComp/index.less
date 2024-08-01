@@ -1,0 +1,570 @@
+.custom-markdown {
+  &-markdownContent {
+    min-height: 100%;
+    //font-size: 13px;
+    background: none;
+
+    * {
+      color: var(--primary-text-color);
+      word-break: break-all;
+    }
+
+    ol li {
+      font-size: 16px;
+      line-height: 28px;
+      list-style: normal;
+      list-style-position: inside;
+    }
+
+    p {
+      line-height: 28px;
+      white-space: pre-wrap;
+    }
+
+    li {
+      & > p {
+        display: inline;
+      }
+    }
+
+    li:has(p) {
+      margin-block-end: 16px;
+    }
+
+    // 表格
+    table {
+      thead {
+        th {
+          color: #020202;
+          font-size: 14px;
+          background-color: #f6f6fe;
+          border-right: 1px solid #fff;
+
+          &:last-child {
+            border: none;
+          }
+        }
+
+        border-color: #d8d9e6 !important;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      tr {
+        height: 34px;
+        border: 1px solid #d8d9e6 !important;
+      }
+
+      th,
+      td {
+        white-space: nowrap;
+        text-align: left;
+        background-color: #fff;
+        border-width: 0;
+      }
+
+      tbody {
+        tr {
+          border-color: var(--markdown-table-tr-border-color);
+          border-style: solid;
+          border-width: 2px;
+
+          td {
+            color: --primary-text-color;
+            border-right: 1px solid #d8d9e6;
+
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+
+        tr:first-child {
+          border-color: var(--markdown-tr-first-border-color);
+          border-style: solid;
+          border-top-width: 1px;
+        }
+      }
+    }
+
+    // 列表
+    ol,
+    ul {
+      padding-left: 18px;
+    }
+
+    pre {
+      padding: 0;
+      font-size: 100%;
+      background-color: rgb(135 138 171 / 10%);
+      border: none;
+      border-width: 1px;
+      border-radius: 0;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none; /* 可选：如果不想要下划线 */
+    }
+
+    a:hover {
+      color: darkblue; /* 可选：悬停时颜色变化 */
+    }
+
+    hr {
+      height: 1px;
+      background-color: rgb(195 197 217 / 65%);
+    }
+
+    blockquote {
+      padding: 8px 20px 8px 12px;
+      background-color: rgb(135 138 171 / 10%);
+      border-color: var(--description-text-color);
+      border-left-width: 4px;
+
+      * {
+        color: var(--description-text-color);
+      }
+    }
+
+    .highlight pre,
+    pre {
+      padding: 0;
+    }
+  }
+
+  &-fontSmall {
+    font-size: 10px;
+
+    p {
+      font-size: 12px;
+    }
+
+    li {
+      font-size: 12px;
+    }
+  }
+
+  &-fontMedium {
+    font-size: 13px;
+
+    p {
+      font-size: 16px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
+
+  &-fontLarge {
+    font-size: 16px;
+
+    p {
+      font-size: 20px;
+    }
+
+    li {
+      font-size: 20px;
+    }
+  }
+
+  &-fontQianwen {
+    font-size: 16px;
+
+    p {
+      font-size: 16px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
+
+  &-code {
+    &-codeContainer {
+      height: 100%;
+
+      > div:last-child {
+        padding: 12px 20px !important;
+        overflow: auto;
+        background: #f9f9fd;
+
+        code {
+          span {
+            white-space: pre-wrap;
+          }
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(0 0 0 / 30%);
+        }
+      }
+    }
+
+    &-codeHead {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      width: 100%;
+      height: 36px;
+      padding-right: 20px;
+      padding-left: 20px;
+      color: #020202;
+      background-color: #f6f6fe;
+    }
+
+    &-codeCopyContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: fit-content;
+      height: 36px;
+      cursor: pointer;
+    }
+
+    &-codeLang,
+    &-copyIcon,
+    &-codeCopy {
+      display: inline;
+      color: #020202;
+      font-size: 14px;
+    }
+
+    &-codeCopy {
+      margin-left: 8px;
+    }
+
+    &-copyIcon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-image {
+    &-imageContainer {
+      display: block;
+      // max-width: 480px;
+    }
+
+    &-errorImg {
+      width: 160px;
+    }
+  }
+
+  &-flushing > p,
+  &-flushing > li,
+  &-flushing > dl,
+  &-flushing > dt,
+  &-flushing > dd,
+  &-flushing > h1,
+  &-flushing > h2,
+  &-flushing > h3,
+  &-flushing > h4,
+  &-flushing > h5,
+  &-flushing > h6,
+  &-flushing > td {
+    &:last-child {
+      &::after {
+        margin-left: 3px;
+        color: var(--primary-color-2);
+        font-weight: bold;
+        vertical-align: baseline;
+        animation: blink 1s steps(5, start) infinite;
+        content: '_';
+      }
+    }
+  }
+
+  &-flushing > ol:last-child li:last-child,
+  &-flushing > pre:last-child code,
+  &-flushing > ul:last-child li:last-child {
+    &::after {
+      margin-left: 3px;
+      color: var(--primary-color-2);
+      font-weight: bold;
+      vertical-align: baseline;
+      animation: blink 1s steps(5, start) infinite;
+      content: '_';
+    }
+  }
+
+  &-flushingEmpty::after {
+    margin-left: 3px;
+    color: var(--primary-color-2);
+    font-weight: bold;
+    vertical-align: baseline;
+    animation: blink 1s steps(5, start) infinite;
+    content: '_';
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.custom-markdown-mobile {
+  &-markdownContent {
+    background: none;
+
+    * {
+      color: var(--primary-text-color);
+      word-break: break-all;
+    }
+
+    ol li {
+      list-style: normal;
+      list-style-position: inside;
+    }
+
+    p {
+      font-size: 4.267vw;
+      line-height: 7.733vw;
+      white-space: pre-wrap;
+    }
+
+    li {
+      font-size: 4.267vw;
+      line-height: 7.733vw;
+
+      & > p {
+        display: inline;
+      }
+    }
+
+    li::marker {
+      display: inline !important;
+    }
+
+    // 表格
+    table {
+      thead {
+        th {
+          color: #020202;
+          background-color: #f6f6fe;
+          border-right: 0.133vw solid #fff;
+
+          &:last-child {
+            border: none;
+          }
+        }
+
+        border-color: #d8d9e6 !important;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      tr {
+        height: 4.533vw;
+        border: 0.133vw solid #d8d9e6 !important;
+      }
+
+      th,
+      td {
+        white-space: nowrap;
+        text-align: left;
+        background-color: #fff;
+        border-width: 0;
+      }
+
+      tbody {
+        tr {
+          border-color: var(--markdown-table-tr-border-color);
+          border-style: solid;
+          border-width: 0.267vw;
+
+          td {
+            color: --primary-text-color;
+            border-right: 0.133vw solid #d8d9e6;
+
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+
+        tr:first-child {
+          border-color: var(--markdown-tr-first-border-color);
+          border-style: solid;
+          border-top-width: 0.267vw;
+        }
+      }
+    }
+    // 列表
+    ol,
+    ul {
+      padding-left: 2.4vw;
+    }
+
+    pre {
+      padding: 0;
+      font-size: 100%;
+      background-color: rgb(135 138 171 / 10%);
+      border: none;
+      border-width: 0.133vw;
+      border-radius: 0;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none; /* 可选：如果不想要下划线 */
+    }
+
+    a:hover {
+      color: darkblue; /* 可选：悬停时颜色变化 */
+    }
+
+    hr {
+      height: 0.133vw;
+      background-color: rgb(195 197 217 / 65%);
+    }
+
+    blockquote {
+      padding: 1.067vw 2.667vw 1.067vw 1.6vw;
+      background-color: rgb(135 138 171 / 10%);
+      border-color: var(--description-text-color);
+      border-left-width: 0.533vw;
+
+      * {
+        color: var(--description-text-color);
+      }
+    }
+
+    .highlight pre,
+    pre {
+      padding: 0;
+    }
+  }
+
+  &-code {
+    &-codeContainer {
+      height: 100%;
+
+      > div {
+        overflow: auto;
+      }
+
+      > div:last-child {
+        padding: 1.6vw 2.667vw !important;
+        overflow: auto;
+        background: #f9f9fd;
+
+        code {
+          span {
+            white-space: pre-wrap;
+          }
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(0 0 0 / 30%);
+        }
+      }
+    }
+
+    &-codeHead {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 7.467vw;
+      padding: 0 2.667vw;
+      color: #020202;
+      background-color: #f6f6fe;
+    }
+
+    &-codeCopyContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: fit-content;
+      height: 4.8vw;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    &-codeLang,
+    &-copyIcon,
+    &-codeCopy {
+      display: inline;
+      color: #020202;
+    }
+
+    &-codeCopy {
+      margin-left: 1.067vw;
+    }
+
+    &-copyIcon {
+      width: 4.267vw;
+      height: 4.267vw;
+      font-size: 4.267vw;
+    }
+  }
+
+  &-image {
+    &-imageContainer {
+      display: block;
+      max-width: 64vw;
+    }
+
+    &-errorImg {
+      width: 21.333vw;
+    }
+  }
+
+  &-flushing > p,
+  &-flushing > li,
+  &-flushing > dl,
+  &-flushing > dt,
+  &-flushing > dd,
+  &-flushing > h1,
+  &-flushing > h2,
+  &-flushing > h3,
+  &-flushing > h4,
+  &-flushing > h5,
+  &-flushing > h6,
+  &-flushing > td {
+    &:last-child {
+      &::after {
+        margin-left: 0.4vw;
+        color: var(--primary-color-2);
+        font-weight: bold;
+        vertical-align: baseline;
+        animation: blink 1s steps(5, start) infinite;
+        content: '_';
+      }
+    }
+  }
+
+  &-flushing > ol:last-child li:last-child,
+  &-flushing > pre:last-child code,
+  &-flushing > ul:last-child li:last-child {
+    &::after {
+      margin-left: 0.4vw;
+      color: var(--primary-color-2);
+      font-weight: bold;
+      vertical-align: baseline;
+      animation: blink 1s steps(5, start) infinite;
+      content: '_';
+    }
+  }
+
+  &-flushingEmpty::after {
+    margin-left: 0.4vw;
+    color: var(--primary-color-2);
+    font-weight: bold;
+    vertical-align: baseline;
+    animation: blink 1s steps(5, start) infinite;
+    content: '_';
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,76 @@
+@import "@/assets/variables.less";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 80, 93, 0.54);
+
+  }
+
+  .modalCon {
+    border-radius: 4px;
+    z-index: 1100;
+    background: #fff;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 678px;
+    padding: 48px 40px;
+    border-radius: 48px;
+    .title {
+      font-weight: 500;
+      text-align: center;
+      color: var(--primary-text-color);
+      font-size: 32px;
+      line-height: 48px;
+      text-align: center;
+    }
+    .content {
+      margin-top: 32px;
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      margin-top: 48px;
+      justify-content: center;
+      .okBtn {
+        width: 336px;
+      }
+      &.showCancelBtn {
+        justify-content: space-between;
+        
+        .okBtn,.cancelBtn {
+          width: 300px;
+        }
+      }
+    }
+ 
+    .hiddenIcon {
+      position: absolute;
+      color: var(--primary-text-color);
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 100;
+    }
+  }
+}
