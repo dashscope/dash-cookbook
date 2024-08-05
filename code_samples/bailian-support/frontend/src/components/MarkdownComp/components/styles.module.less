@@ -1,0 +1,110 @@
+.embed-card {
+  display: flex;
+  width: 320px;
+  padding: 8px;
+
+  .icon-block {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+
+    & + div {
+      flex: 1 1 auto;
+      margin-left: 8px;
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      h4 {
+        width: 200px;
+        margin-bottom: 0;
+        overflow: hidden;
+        color: #666;
+        font-size: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      p {
+        color: #c9c9c9;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.pdf-content {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  margin-top: 16px;
+  padding: 0 20px;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  background-color: white;
+  border-radius: 10px;
+
+  img {
+    width: 18px;
+    height: 20px;
+    margin-right: 14px;
+  }
+}
+
+img.img {
+  height: 110px;
+  margin-top: 14px;
+  background: #fff;
+  border: 1px solid #c3c4d4;
+  border-radius: 12px;
+}
+
+.audioWrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  // width: 320px;
+  height: 44px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgb(135 138 171 / 50%);
+  border-radius: 4px;
+
+  .markIcon {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+  .progress {
+    position: relative;
+    display: inline-block;
+    width: 205px;
+    height: 18px;
+    background-image: url('https://img.alicdn.com/imgextra/i1/O1CN01LlaaGW1IC5tcQ3m4a_!!6000000000856-2-tps-404-38.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .rate {
+      position: absolute;
+      z-index: 1;
+      display: inline-block;
+      flex-shrink: 0;
+      width: 100%;
+      height: 18px;
+      object-fit: cover;
+      clip-path: inset(0 205px 0 0);
+    }
+  }
+
+  .time {
+    flex-shrink: 0;
+    margin-left: 20px;
+    color: #9696b9;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}

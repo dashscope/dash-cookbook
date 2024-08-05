@@ -1,0 +1,314 @@
+@import '@/assets/variables.less';
+@import '@/assets/animate.less';
+@import '@/assets/mixins.less';
+
+.chatContent {
+  height: 100%;
+  position: relative;
+
+  .chatContentFooterFixed {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%);
+    text-align: center;
+    .width-media-query();
+
+    .pauseBtn {
+      margin-bottom: 12px;
+      height: 30px;
+      padding: 0 12px;
+      line-height: 30px;
+      border: 1px solid transparent;
+      box-sizing: content-box;
+
+      .icon {
+        margin-right: 4px;
+        font-size: 18px;
+      }
+
+      &:hover:not(.disabled) {
+        color: @color-primary-1;
+        border-color: @color-primary-1;
+      }
+    }
+
+    .textInput {
+      transition-duration: 0.2s;
+    }
+  }
+
+  .chatDialogScroll {
+    height: calc(100% - 180px);
+    overflow: auto;
+  }
+}
+
+.hiddenEle {
+  flex-shrink: 0;
+  height: 30px;
+}
+
+.textLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+
+  .text {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    line-height: 24px;
+    color: @color-primary-1;
+    cursor: pointer;
+  }
+}
+
+.disabled {
+  opacity: 0.65;
+}
+
+.nullTip {
+  margin-top: 60px;
+}
+.sysTip {
+  width: 500px;
+  margin: 30px auto 0;
+  color: #b6b6b6;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  animation: fade-in 0.2s ease-in-out forwards;
+  &:before,
+  &:after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background-color: #b6b6b6;
+    position: absolute;
+  }
+  &:before {
+    top: 12px;
+    left: 70px;
+  }
+  &:after {
+    top: 12px;
+    left: auto;
+    right: 70px;
+  }
+}
+.fadeIn {
+  animation: fade-in 0.6s ease-in-out forwards;
+}
+.fadeOut {
+  animation: fade-out 0.6s ease-in-out forwards;
+}
+.fadeOutLeft {
+  animation: fade-out-left 0.6s ease-in-out;
+}
+@keyframes fade-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.guideComp {
+  margin: 0 auto;
+  text-align: center;
+
+  > .logo {
+    height: 36px;
+  }
+
+  > .title {
+    margin-top: 16px;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
+    color: @text-gray-1;
+  }
+
+  > .desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 12px;
+    color: var(--text-gray-1);
+  }
+
+  > .prompt {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 12px;
+    color: var(--description-text-color);
+  }
+
+  .recommends {
+    margin: 32px auto 12px;
+    text-align: right;
+    .width-media-query();
+
+    .retryBtn {
+      height: 36px;
+      line-height: 34px;
+      color: var(--text-gray-1);
+      padding: 0 14px;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: @color-primary-1;
+        border-color: @color-primary-1;
+      }
+
+      .btnWrap {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          margin-right: 6px;
+          font-size: 18px;
+
+          &.loading {
+            .animate-loading;
+          }
+        }
+      }
+    }
+
+    .recommendList {
+      margin-top: 12px;
+
+      .recommendItem {
+        cursor: pointer;
+        height: 80px;
+        text-align: left;
+        position: relative;
+        box-sizing: border-box;
+
+        background: #fff;
+        padding: 16px 24px 10px;
+        border: 1px solid transparent;
+        border-radius: 16px;
+
+        &:hover {
+          background: var(--prompt-hover-bg);
+          .gradient-border();
+          .prompt-gradient-border();
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+
+        .title {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: @text-gray-1;
+        }
+
+        .desc {
+          margin-top: 6px;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--description-text-color);
+        }
+
+        .newTag {
+          width: 32px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-height: 839px) {
+  .nullTip {
+    margin-top: 32px;
+  }
+
+  .guideComp {
+    > .title {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    > .desc {
+      margin-top: 8px;
+    }
+    > .prompt {
+      margin-top: 8px;
+    }
+    .recommends {
+      margin-top: 16px;
+      .recommendList {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-height: 1080px) {
+  .nullTip {
+    margin-top: 80px;
+  }
+
+  .guideComp {
+    > .title {
+      font-size: 35px;
+      line-height: 50px;
+    }
+    > .desc {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    > .prompt {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .recommends {
+      .recommendList {
+        margin-top: 18px;
+        .recommendItem {
+          height: 92px;
+        }
+      }
+    }
+  }
+}

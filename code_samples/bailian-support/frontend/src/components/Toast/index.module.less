@@ -1,0 +1,93 @@
+@import '@/assets/variables.less';
+
+.toast {
+  display: inline-flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  color: var(--primary-text-color);
+  background: #fff;
+  transform: translate(-50%, 0);
+  animation: fadeIn 0.2s 1 ease-in;
+  box-shadow: 0 3px 6px -4px #dcdbdf, 0 6px 16px 0 #dcdbdf;
+  height: 48px;
+  padding: 0 24px 0 18px;
+  border-radius: 8px;
+  left: 50%;
+  top: 16px;
+  &.centerInChat {
+    left: calc(50% + 136px);
+    top: 72px;
+  }
+
+  > span {
+    flex-shrink: 0;
+  }
+
+  .icon {
+    margin-right: 8px;
+  }
+
+  .success {
+    color: #009431;
+  }
+
+  .warning {
+    color: #ffab1b;
+  }
+
+  .error {
+    color: #e63224;
+  }
+  .loading {
+    animation: spin 2s ease-in-out infinite;
+  }
+}
+
+.fadeout {
+  animation: fadeout 0.2s 1 ease-in;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-50%, -100%);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .toast {
+    font-size: 12px;
+  }
+}

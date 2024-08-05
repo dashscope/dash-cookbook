@@ -1,0 +1,56 @@
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-border(@border-width: 1px, @border-radius: 16px, @color: #eee) {
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: calc(@border-radius - @border-width * 0.5);
+    background: var(--gradient-bg-color);
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    top: calc(-1 * @border-width);
+    left: calc(-1 * @border-width);
+    z-index: -2;
+    width: calc(100% + @border-width * 2);
+    height: calc(100% + @border-width * 2);
+    background: var(--gradient-border-color);
+    background-size: 100% 100%;
+    background-position: 0 50%;
+    border-radius: (@border-radius + @border-width * 0.5);
+    // animation: moveGradient 4s alternate infinite;
+  }
+}
+
+.prompt-gradient-border() {
+  &::before {
+    background: var(--prompt-hover-before-bg);
+  }
+}
+
+.width-media-query() {
+  width: 65%;
+  min-width: 600px;
+  max-width: 1000px;
+  // @media (max-width: 1439px) {
+  //   width: 600px;
+  // }
+
+  // @media (min-width: 1440px) and (max-width: 1920px) {
+  //   width: calc(600px + (800 - 600) * ((100vw - 1440px) / (1920 - 1440)));
+  // }
+
+  // @media (min-width: 1920px) {
+  //   width: 800px;
+  // }
+}
