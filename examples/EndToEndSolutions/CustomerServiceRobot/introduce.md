@@ -207,7 +207,7 @@ def retrieving_documents(document_id: str, question: str) -> str:
 ```
 # 五、效果展示
 ## 1、订单及物流咨询
-![3434.PNG](https://intranetproxy.alipay.com/skylark/lark/0/2024/png/66356752/1722396840173-272c9648-dba4-4ebf-9f4e-66288b0e515d.png#clientId=uf3585ebf-2bf8-4&from=ui&id=ud12b8220&originHeight=889&originWidth=655&originalType=binary&ratio=1&rotation=0&showTitle=false&size=275215&status=done&style=none&taskId=u482773f8-4fc4-421f-9b32-af30c9d6740&title=)
+![3434.PNG](./images/img_1.png)
 ## 2、售前产品咨询
-![767787.PNG](https://intranetproxy.alipay.com/skylark/lark/0/2024/png/66356752/1722397157758-521daeea-57cc-4a39-9ba0-be04d9c1b05b.png#clientId=uf3585ebf-2bf8-4&from=ui&id=u7b114789&originHeight=984&originWidth=637&originalType=binary&ratio=1&rotation=0&showTitle=false&size=309492&status=done&style=none&taskId=udd8ee08d-9ac0-4392-8ea1-60a84c8a39c&title=)
+![767787.PNG](./images/img_2.png)
 
