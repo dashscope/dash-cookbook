@@ -1,0 +1,176 @@
+@import '@/assets/mixins.less';
+
+.answerItem {
+  box-sizing: border-box;
+  // width: 778px;
+  // margin: 0 auto;
+  // transform: translateX(3px);
+}
+.answerContent {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 20px 22px;
+  .width-media-query();
+
+  :global {
+    .custom-markdown-flushingEmpty::after,
+    .custom-markdown-flushing > p:last-child::after, 
+    .custom-markdown-flushing > li:last-child::after, 
+    .custom-markdown-flushing > dl:last-child::after, 
+    .custom-markdown-flushing > dt:last-child::after, 
+    .custom-markdown-flushing > dd:last-child::after, 
+    .custom-markdown-flushing > h1:last-child::after, 
+    .custom-markdown-flushing > h2:last-child::after, 
+    .custom-markdown-flushing > h3:last-child::after, 
+    .custom-markdown-flushing > h4:last-child::after, 
+    .custom-markdown-flushing > h5:last-child::after, 
+    .custom-markdown-flushing > h6:last-child::after, 
+    .custom-markdown-flushing > td:last-child::after {
+      color: var(--primary-color-2);
+    }
+  }
+
+  .pagination {
+    z-index: 10;
+    position: absolute;
+    left: -80px;
+    top: 6px;
+  }
+
+  .logo {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-right: 18px;
+
+    &.circle {
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .containerWrap {
+    width: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .content {
+    z-index: 10;
+    width: 100%;
+    overflow-x: auto;
+    font-size: 16px;
+
+    .logoBtn {
+      background: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 2px;
+      margin-right: 16px;
+      flex-shrink: 0;
+      border: none;
+      cursor: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .picture {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+    .errorInfo {
+      //display: inline-block;
+      //padding: 8px;
+      //font-size: 16px;
+      //color: #f04b57;
+      //background-color: rgba(240, 75, 87, 0.1);
+      //border: 1px solid #f04b57;
+    }
+    .containerWrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+}
+
+.goon {
+  font-size: 14px;
+  color: var(--description-text-color);
+  margin-top: 12px;
+
+  a {
+    margin-left: 4px;
+  }
+}
+
+.reGenerateLabel {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reGenerateFeedback {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 18px;
+  background: #f7f7fb;
+  margin-top: 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
+
+  .labelTip {
+    color: #969696;
+    margin-right: 10px;
+  }
+
+  .icon {
+    font-size: 20px;
+    margin-right: 3px;
+  }
+
+  .cancelBtn {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--text-gray-1);
+  }
+
+  .radioItem {
+    border-bottom: 1px solid transparent;
+    margin-right: 16px;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--primary-color);
+    &:hover {
+      border-bottom: 1px solid var(--primary-color);
+
+    }
+  }
+
+  .activeRadioItem {
+    border-bottom: 1px solid var(--primary-color);
+  }
+}

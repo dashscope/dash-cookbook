@@ -1,0 +1,13 @@
+server:
+  port: 5000
+
+spring:
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+
+bailian:
+  workspace:
+  appId:
+  apiKey:

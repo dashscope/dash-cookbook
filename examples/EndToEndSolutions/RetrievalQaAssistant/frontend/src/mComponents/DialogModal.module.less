@@ -1,0 +1,69 @@
+@import "@/assets/variables.less";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.97;
+    background: rgba(135, 138, 171, 0.2);
+  }
+
+  .modalCon {
+    border-radius: 4px;
+    z-index: 1100;
+    background: #fff;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+     width: 90vw;
+    > div {
+      padding: 40px;
+    }
+
+    .hiddenIcon {
+      position: absolute;
+      color: var(--primary-text-color);
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .title {
+      position: relative;
+      text-align: center;
+      color: var(--primary-text-color);
+      margin-bottom: 12px;
+
+      .closeIcon {
+        position: absolute;
+        color: var(--primary-text-color);
+        right: 20px;
+        top: 20px;
+      }
+    }
+    .btn {
+      width: 100%;
+      margin-top: 47px;
+      height: 64px;
+      font-size: 28px;
+    }
+  }
+}
